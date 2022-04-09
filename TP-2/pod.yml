@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: 1
+metadata:
+  name: simple-webapp-color
+spec:
+  containers:
+  - name: simple-webapp-color
+    image: mmumshad/simple-webapp-color
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
+    env:
+      - name: APP_COLOR
+        value: red
+      
